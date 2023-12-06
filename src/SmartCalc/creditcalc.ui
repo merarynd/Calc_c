@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CreditCalc</class>
+ <widget class="QDialog" name="CreditCalc">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>626</width>
+    <height>446</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Credit Calculator</string>
+  </property>
+  <widget class="QPushButton" name="raschet">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>244</y>
+     <width>641</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #3399FF;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #3399FF;
+    font: bold 16px;
+    min-width: 5em;
+    padding: 3px;
+}
+
+QPushButton:pressed {
+    background-color: #007ACC;
+    border-style: inset;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Рассчитать</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>0</y>
+     <width>260</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #800080;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="sum_credita">
+      <property name="styleSheet">
+       <string>QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #800080;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Сумма кредита:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="srok_credita">
+      <property name="styleSheet">
+       <string>QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #800080;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Срок кредита (месяцев):</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="percent_credita">
+      <property name="styleSheet">
+       <string>QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #800080;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Процентная ставка:</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>10</y>
+     <width>211</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #800080;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="leftMargin">
+     <number>6</number>
+    </property>
+    <item>
+     <widget class="QLineEdit" name="sum">
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #800080;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="srok">
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #800080;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="percent">
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #800080;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>170</y>
+     <width>191</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #0000FF;
+    border: 2px solid #000000;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <property name="leftMargin">
+     <number>5</number>
+    </property>
+    <property name="topMargin">
+     <number>7</number>
+    </property>
+    <item>
+     <widget class="QRadioButton" name="ann">
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #0000FF;
+    border: 2px solid #000000;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Ануительный</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QRadioButton" name="diff">
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #0000FF;
+    border: 2px solid #000000;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Дифференцированный</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>320</y>
+     <width>241</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #006400;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <widget class="QLabel" name="ejemesyac_platej">
+      <property name="styleSheet">
+       <string>QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #006400;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Ежемесячный платеж:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="pereplata_po_kredity">
+      <property name="styleSheet">
+       <string>QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #006400;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Переплата по кредиту:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="obshay_viplata">
+      <property name="styleSheet">
+       <string>QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #006400;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Общая выплата:</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>320</y>
+     <width>261</width>
+     <height>117</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #006400;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+     <widget class="QLabel" name="res_platej">
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #006400;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="res_pereplata">
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #006400;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="res_viplata">
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #006400;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>170</y>
+     <width>298</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #0000FF;
+    border: 2px solid #000000;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+
+</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="tip_credita">
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: #000000;
+    font: bold 20px;
+    background-color: #0000FF;
+    border: 2px solid #000000;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Тип ежемесячных платежей:</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

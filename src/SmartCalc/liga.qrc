@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/liga">
+        <file>img/Liga.jpeg</file>
+    </qresource>
+</RCC>
